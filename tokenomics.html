@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Token Zila - Tokenomics</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    <header class="navbar">
+        <div class="logo">
+            <h1>TOKEN ZILA</h1>
+        </div>
+        
+        <button class="hamburger" id="hamburgerBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <div class="dropdown-menu" id="dropdownMenu">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="whitepaper.html">Whitepaper</a>
+            <a href="airdrop.html">Airdrop</a>
+            <a href="tokenomics.html">Tokenomics</a>
+            <a href="about.html">About Zila</a>
+            <div class="contact-section">
+                <span>Contact Support:</span>
+                <a href="https://t.me/yourtelegram" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+                <a href="https://twitter.com/yourtwitter" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main class="home-content">
+        <h2>TOKENOMICS</h2>
+        <p>Detailed breakdown of Zila Token distribution and usage.</p>
+
+        <div style="max-width: 700px; margin: 2rem auto; text-align: left;">
+            <h3>Token Allocation:</h3>
+            <ul style="list-style: none; padding-left: 0;">
+                <li><strong>Total Supply:</strong> 1,000,000,000 ZILA</li>
+                <li><strong>Airdrop:</strong> 10% (100,000,000 ZILA)</li>
+                <li><strong>Team:</strong> 15% (150,000,000 ZILA) - Locked for 1 year</li>
+                <li><strong>Marketing & Development:</strong> 20% (200,000,000 ZILA)</li>
+                <li><strong>Liquidity Pool:</strong> 25% (250,000,000 ZILA)</li>
+                <li><strong>Staking Rewards:</strong> 30% (300,000,000 ZILA)</li>
+            </ul>
+
+            <h3>Transaction Tax:</h3>
+            <ul style="list-style: none; padding-left: 0;">
+                <li><strong>Buy Tax:</strong> 3%
+                    <ul>
+                        <li>1% - Liquidity</li>
+                        <li>1% - Marketing</li>
+                        <li>1% - Burn</li>
+                    </ul>
+                </li>
+                <li><strong>Sell Tax:</strong> 5%
+                    <ul>
+                        <li>2% - Liquidity</li>
+                        <li>2% - Marketing</li>
+                        <li>1% - Burn</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <p><em>Note: Tokenomics are subject to change based on community votes and project development.</em></p>
+        </div>
+    </main>
+
+    <script>
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+        hamburgerBtn.addEventListener('click', () => dropdownMenu.classList.toggle('active'));
+    </script>
+</body>
+</html>
