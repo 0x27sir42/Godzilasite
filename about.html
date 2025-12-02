@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Token Zila - About Zila</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    <header class="navbar">
+        <div class="logo">
+            <h1>TOKEN ZILA</h1>
+        </div>
+        
+        <button class="hamburger" id="hamburgerBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <div class="dropdown-menu" id="dropdownMenu">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="whitepaper.html">Whitepaper</a>
+            <a href="airdrop.html">Airdrop</a>
+            <a href="tokenomics.html">Tokenomics</a>
+            <a href="about.html">About Zila</a>
+            <div class="contact-section">
+                <span>Contact Support:</span>
+                <a href="https://t.me/yourtelegram" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+                <a href="https://twitter.com/yourtwitter" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main class="home-content">
+        <h2>ABOUT ZILA</h2>
+        <p>Token Zila is inspired by the legendary Godzilla — a symbol of strength, power, and resilience in the crypto world.</p>
+        
+        <div style="margin: 2rem 0; max-width: 600px; margin-left: auto; margin-right: auto;">
+            <p>Our mission is to build a decentralized ecosystem that empowers users with secure, fast, and low-cost transactions. Just like Godzilla dominates the screen, ZILA aims to make its mark in the crypto space with innovative technology and a strong community.</p>
+            
+            <p>Launched in 2025, Token Zila is built on the Ethereum blockchain (ERC-20) with plans to expand to other chains in the future. We believe in transparency, community governance, and creating real value for our holders.</p>
+        </div>
+
+        <img src="zila-logo.png" alt="Token Zila Logo" style="width: 150px; height: 150px; border-radius: 50%; margin: 1rem 0; box-shadow: 0 0 20px rgba(255, 69, 0, 0.8);">
+    </main>
+
+    <script>
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+        hamburgerBtn.addEventListener('click', () => dropdownMenu.classList.toggle('active'));
+    </script>
+</body>
+</html>
