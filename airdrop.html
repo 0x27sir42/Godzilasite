@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Token Zila - Airdrop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    <header class="navbar">
+        <div class="logo">
+            <h1>TOKEN ZILA</h1>
+        </div>
+        
+        <button class="hamburger" id="hamburgerBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <div class="dropdown-menu" id="dropdownMenu">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="whitepaper.html">Whitepaper</a>
+            <a href="airdrop.html">Airdrop</a>
+            <a href="tokenomics.html">Tokenomics</a>
+            <a href="about.html">About Zila</a>
+            <div class="contact-section">
+                <span>Contact Support:</span>
+                <a href="https://t.me/yourtelegram" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+                <a href="https://twitter.com/yourtwitter" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main class="home-content">
+        <h2>TOKEN ZILA AIRDROP</h2>
+        <p>Claim your free ZILA tokens now! Join our community and complete simple tasks to get rewards.</p>
+        
+        <div style="margin: 2rem 0; text-align: left; max-width: 600px; margin-left: auto; margin-right: auto;">
+            <h3>📋 Airdrop Tasks:</h3>
+            <ul style="list-style: disc; padding-left: 1.5rem; margin: 1rem 0;">
+                <li>Join our Telegram group & channel</li>
+                <li>Follow us on Twitter & retweet our pinned post</li>
+                <li>Fill the airdrop form</li>
+                <li>Invite friends to join (extra rewards!)</li>
+            </ul>
+            
+            <h3>🎁 Reward Details:</h3>
+            <p>Total Airdrop Pool: 10,000,000 ZILA<br>
+            Per Participant: Up to 500 ZILA<br>
+            Airdrop End Date: 31st December 2025</p>
+        </div>
+
+        <a href="https://forms.gle/yourformlink" target="_blank" class="btn">Join Airdrop Now</a>
+    </main>
+
+    <script>
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+        hamburgerBtn.addEventListener('click', () => dropdownMenu.classList.toggle('active'));
+    </script>
+</body>
+</html>
