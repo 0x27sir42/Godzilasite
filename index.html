@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Token Zila - Official Website</title>
+    <!-- Hubungkan CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome untuk ikon Telegram & Twitter -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Background Image (Godzilla) -->
+    <div class="background-overlay"></div>
+
+    <!-- Navigasi Utama -->
+    <header class="navbar">
+        <div class="logo">
+            <h1>TOKEN ZILA</h1>
+        </div>
+        
+        <!-- Tombol Garis 3 (Hamburger) -->
+        <button class="hamburger" id="hamburgerBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Menu Dropdown dari Hamburger -->
+        <div class="dropdown-menu" id="dropdownMenu">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="whitepaper.html">Whitepaper</a>
+            <a href="airdrop.html">Airdrop</a>
+            <a href="tokenomics.html">Tokenomics</a>
+            <a href="about.html">About Zila</a>
+            <div class="contact-section">
+                <span>Contact Support:</span>
+                <a href="https://t.me/yourtelegram" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+                <a href="https://twitter.com/yourtwitter" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Konten Utama Halaman Beranda -->
+    <main class="home-content">
+        <h2>WELCOME TO TOKEN ZILA</h2>
+        <p>Your ultimate crypto token powered by the legend of Godzilla.</p>
+        <a href="dashboard.html" class="btn">Visit Dashboard</a>
+    </main>
+
+    <!-- Script untuk Hamburger Menu -->
+    <script>
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+
+        hamburgerBtn.addEventListener('click', () => {
+            dropdownMenu.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
