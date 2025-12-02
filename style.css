@@ -158,3 +158,47 @@ body {
         font-size: 4rem;
     }
 }
+
+.tokenomics-container {
+    text-align: center;
+    padding-top: 120px;
+    color: white;
+}
+
+.page-title {
+    font-size: 2.4rem;
+    margin-bottom: 25px;
+}
+
+.chart-card {
+    width: 90%;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(0,0,0,0.55);
+    border-radius: 20px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 18px #7f00ff;
+}
+
+.tokenomics-details {
+    margin-top: 30px;
+    text-align: left;
+    width: 90%;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(0,0,0,0.55);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.tokenomics-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.tokenomics-details li {
+    padding: 6px 0;
+    font-size: 1.1rem;
+}
