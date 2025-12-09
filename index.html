@@ -30,6 +30,37 @@
 
     <style type="text/tailwindcss">
         @layer utilities {
+
+            /* LOADING SCREEN */
+            .loading-screen {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: black;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 9999;
+            }
+
+            .loading-logo {
+                width: 160px;
+                height: 160px;
+                border-radius: 50%;
+                animation: spin 2s linear infinite;
+                border: 4px solid #6C63FF;
+                padding: 5px;
+                box-shadow: 0 0 20px #6C63FF;
+            }
+
+            @keyframes spin {
+                from { transform: rotate(0deg); }
+                to { transform: rotate(360deg); }
+            }
+
+            /* GENERAL SECTION */
             .section-bg {
                 background-size: cover;
                 background-position: center;
@@ -41,7 +72,6 @@
                 padding: 2rem 1rem;
                 position: relative;
             }
-
             .section-overlay {
                 position: absolute;
                 top: 0;
@@ -59,6 +89,7 @@
                 color: white;
             }
 
+            /* TOKEN IMAGE */
             .token-circle {
                 width: 200px;
                 height: 200px;
@@ -69,6 +100,7 @@
                 margin: 0 auto 1.5rem auto;
             }
 
+            /* SOCIAL ICONS */
             .social-icon {
                 width: 40px;
                 height: 40px;
@@ -82,23 +114,26 @@
                 transform: scale(1.1);
                 box-shadow: 0 0 15px rgba(108, 99, 255, 0.8);
             }
-
-            /* FOOTER FIXED BOTTOM */
-            .footer-fixed-bottom {
-                position: fixed;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                z-index: 50;
-                background: rgba(0,0,0,0.85);
-                backdrop-filter: blur(8px);
-                padding: 1rem 0;
-            }
         }
     </style>
+
+    <script>
+        // LOADING SCREEN REMOVE
+        window.addEventListener("load", function(){
+            document.getElementById("loading").style.opacity = "0";
+            setTimeout(() => {
+                document.getElementById("loading").style.display = "none";
+            }, 600);
+        });
+    </script>
 </head>
 
 <body class="font-sans bg-black">
+
+    <!-- ✔ LOADING SCREEN -->
+    <div id="loading" class="loading-screen">
+        <img src="zilacoy.jpg" class="loading-logo">
+    </div>
 
     <!-- NAVBAR -->
     <nav class="fixed top-0 left-0 w-full bg-black/80 backdrop-blur-md z-50 py-3">
@@ -109,7 +144,7 @@
 
             <div class="hidden md:flex space-x-8">
                 <a href="#home" class="text-white hover:text-zila-primary">Home</a>
-                <a href="#about" class="text-white hover:text-zila-primary">About Zila</a>
+                <a href="#about" class="text-white hover:text-zila-primary">About</a>
                 <a href="#tokenomics" class="text-white hover:text-zila-primary">Tokenomics</a>
                 <a href="#mechanism" class="text-white hover:text-zila-primary">Mechanism</a>
                 <a href="#roadmap" class="text-white hover:text-zila-primary">Roadmap</a>
@@ -121,7 +156,6 @@
     <!-- HOME SECTION -->
     <section id="home" class="section-bg" style="background-image:url('https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&w=1400');">
         <div class="section-overlay"></div>
-
         <div class="section-content text-center">
             <img src="zilacoy.jpg" class="token-circle">
             <h1 class="text-5xl font-bold mb-4">ZILA TOKEN</h1>
@@ -138,17 +172,16 @@
                 </span>
             </div>
 
-            <a href="ZILA_Whitepaper (5).pdf"
+            <a href="ZILA_Whitepaper.pdf"
                class="bg-zila-primary hover:bg-zila-primary/90 text-white font-bold py-3 px-8 rounded-full inline-block">
                Get Started <i class="fa fa-arrow-right ml-2"></i>
             </a>
         </div>
     </section>
 
-    <!-- ABOUT ZILA -->
+    <!-- ABOUT SECTION -->
     <section id="about" class="section-bg" style="background-image:url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=1400');">
         <div class="section-overlay"></div>
-
         <div class="section-content">
             <h2 class="text-4xl font-bold text-center mb-6">About Zila Token</h2>
 
@@ -163,17 +196,18 @@
                     <p><strong>Vision:</strong> To become a leading global decentralized financial gateway.</p>
                     <p><strong>Mission:</strong> Build a secure, scalable, community-driven DeFi ecosystem.</p>
                 </div>
+            </div>
         </div>
     </section>
 
     <!-- TOKENOMICS -->
     <section id="tokenomics" class="section-bg" style="background-image:url('https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?auto=format&fit=crop&w=1400');">
         <div class="section-overlay"></div>
-
         <div class="section-content text-center">
             <h2 class="text-4xl font-bold mb-8">TOKENOMICS</h2>
 
-            <div class="grid md:grid-cols-4 gap-6">
+            <div class="grid md:grid-cols-3 gap-6">
+
                 <div class="bg-white/10 backdrop-blur p-6 rounded-xl border border-zila-primary/30">
                     <h3 class="text-zila-primary text-2xl">Total Supply</h3>
                     <p class="text-3xl">1,000,000,000</p>
@@ -185,47 +219,49 @@
                 </div>
 
                 <div class="bg-white/10 backdrop-blur p-6 rounded-xl border border-zila-primary/30">
-                    <h3 class="text-zila-primary text-2xl">liquidity</h3>
+                    <h3 class="text-zila-primary text-2xl">Liquidity</h3>
                     <p class="text-3xl">10%</p>
                 </div>
 
-                <div class="bg-white/10 backdrop-blur p-6 rounded-xl border border-zila-primary/30">
+                <div class="bg-white/10 backdrop-blur p-6 rounded-xl border-zila-primary/30">
                     <h3 class="text-zila-primary text-2xl">Burn</h3>
                     <p class="text-3xl">5%</p>
                 </div>
+
                 <div class="bg-white/10 backdrop-blur p-6 rounded-xl border border-zila-primary/30">
                     <h3 class="text-zila-primary text-2xl">Airdrop</h3>
                     <p class="text-3xl">5%</p>
                 </div>
-            </div>
-            <div class="bg-white/10 backdrop-blur p-6 rounded-xl border border-zila-primary/30">
-                    <h3 class="text-zila-primary text-2xl">Ecosistem</h3>
+
+                <div class="bg-white/10 backdrop-blur p-6 rounded-xl border border-zila-primary/30">
+                    <h3 class="text-zila-primary text-2xl">Ecosystem</h3>
                     <p class="text-3xl">20%</p>
-            </div>
-            <div class="bg-white/10 backdrop-blur p-6 rounded-xl border border-zila-primary/30">
+                </div>
+
+                <div class="bg-white/10 backdrop-blur p-6 rounded-xl border border-zila-primary/30">
                     <h3 class="text-zila-primary text-2xl">Marketing</h3>
                     <p class="text-3xl">5%</p>
-            </div>
-            <div class="bg-white/10 backdrop-blur p-6 rounded-xl border border-zila-primary/30">
+                </div>
+
+                <div class="bg-white/10 backdrop-blur p-6 rounded-xl border border-zila-primary/30">
                     <h3 class="text-zila-primary text-2xl">Team</h3>
-                    <p class="text-3xl">15%%</p>
+                    <p class="text-3xl">15%</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER (FIXED) -->
-    <footer class="footer-fixed-bottom text-center text-white border-t border-zila-primary/20">
-
+    <!-- FOOTER -->
+    <footer class="text-center text-white py-6 border-t border-zila-primary/20">
         <div class="mb-3 flex justify-center space-x-4">
-            <a href="https://twitter.com/" target="_blank" class="social-icon bg-white/10"><i class="fa fa-twitter"></i></a>
-            <a href="https://t.me/" target="_blank" class="social-icon bg-white/10"><i class="fa fa-telegram"></i></a>
-            <a href="https://youtube.com/" target="_blank" class="social-icon bg-white/10"><i class="fa fa-youtube"></i></a>
-            <a href="https://linkedin.com/" target="_blank" class="social-icon bg-white/10"><i class="fa fa-linkedin"></i></a>
+            <a href="#" class="social-icon bg-white/10"><i class="fa fa-twitter"></i></a>
+            <a href="#" class="social-icon bg-white/10"><i class="fa fa-telegram"></i></a>
+            <a href="#" class="social-icon bg-white/10"><i class="fa fa-youtube"></i></a>
+            <a href="#" class="social-icon bg-white/10"><i class="fa fa-linkedin"></i></a>
         </div>
 
         <p class="text-sm opacity-70">© 2025 ZILA. All Rights Reserved.</p>
     </footer>
 
 </body>
-                                                              </html>
+</html>
